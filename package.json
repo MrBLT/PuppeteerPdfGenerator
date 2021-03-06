@@ -1,0 +1,16 @@
+{
+  "name": "puppeteer-pdf-generator",
+  "version": "1.0.0",
+  "description": "API to generate PDFs using URLs or HTML",
+  "main": "index.js",
+  "author": "Brice Thrower",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SalinaVortexCorporation/PuppeteerPdfGenerator.git"
+  }
+}
