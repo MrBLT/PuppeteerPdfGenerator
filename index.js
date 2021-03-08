@@ -1,5 +1,6 @@
 const express = require('express')
 const puppeteer = require('puppeteer')
+const bodyParser = require('body-parser')
 const app = express()
 const port = 1337
 
@@ -10,9 +11,11 @@ browser = null;
     browser = await puppeteer.launch({
         headless: true
     });
-    console.log('Puppeteer Launched');
-    // page = await browser.newPage();
-    console.log('New Page created');
+    if(browser.isConnected() === true) {
+        console.log('Puppeteer Launched');
+    } else {
+        console.log('Puppeteer Not Started');
+    }
 })();
 
 app.get('/', async (req, res) => {
@@ -52,8 +55,10 @@ app.get("/pdf/url", async (req, res) => {
     }
 
 })
-app.use(express.json())
+
+app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/pdf/html", async (req, res) => {
+
     const content = req.body.content;
     // const url = 'https://www.google.com';
 
