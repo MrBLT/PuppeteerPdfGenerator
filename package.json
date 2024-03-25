@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "API to generate PDFs using URLs or HTML",
   "main": "index.js",
+  "type": "module",
   "author": "Brice Thrower",
   "license": "ISC",
   "repository": {
