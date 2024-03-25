@@ -28,7 +28,7 @@ recursively to locate the chrome install.</sub></sup>
 1. run `npm install`
 2. run `node index.js`
 
-## Test Functionality
+## Usage
 
 1. Determine HOST running the project, if development this is http://localhost:1337 if port not changed
 2. Generate a PDF from URL `<HOST>/pdf/url?target=https%3A%2F%2Fwww.google.com%0A`
