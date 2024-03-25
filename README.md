@@ -37,7 +37,7 @@ recursively to locate the chrome install.</sub></sup>
 
 ## Deploy as Windows Service
 
-The deployment script will install (or reinstall if already exists) a Windows Service and start it. The "Optional" environment variables above are required if using this deployment.
+The deployment script uses node-windows to install (or reinstall if already exists) a Windows Service and start it. The "Optional" environment variables above are required if using this deployment.
 
 1. run `npm install`
 2. run `node deploy.js`
