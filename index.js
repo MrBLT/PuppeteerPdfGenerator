@@ -1,9 +1,9 @@
-// const express = require('express');
-// const puppeteer = require('puppeteer');
+import 'dotenv/config'
 import puppeteer from "puppeteer";
 import express from "express";
+
 const app = express();
-const port = 1337;
+const port = process.env.EXPRESS_JS_PORT;
 
 // Middleware for parsing JSON and URL-encoded bodies
 app.use(express.json());
@@ -18,6 +18,7 @@ let browser = null;
             headless: true // Run browser in headless mode for server environments
         });
         console.log('Puppeteer Launched');
+        console.log(puppeteer.configuration)
     } catch (error) {
         console.error('Puppeteer launch failed:', error);
     }

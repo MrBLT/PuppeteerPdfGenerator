@@ -89,3 +89,5 @@ typings/
 
 # Jetbrains IDE files
 \.idea/
+
+daemon/
