@@ -18,10 +18,12 @@ const svc = new Service({
         "--max_old_space_size=4096"
     ],
     // allowServiceLogon: true,
-    env: {
-        name: 'PUPPETEER_CACHE_DIR',
-        value: process.env.PUPPETEER_CACHE_DIR
-    }
+    env: [
+        {
+            name: 'PUPPETEER_CACHE_DIR',
+            value: process.env.PUPPETEER_CACHE_DIR
+        }
+    ]
 });
 
 // Listen for the "install" event, which indicates the process is installed
